@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "AI Productivity Blocker",
   "version": "1.0.0",
-  "description": "Uses Claude AI to determine if a site is productive and blocks it if not.",
+  "description": "A Chrome extension that uses Claude AI to determine if a site is productive and blocks it if not.",
   "permissions": [
     "webNavigation",
     "tabs",
