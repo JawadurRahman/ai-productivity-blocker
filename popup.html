@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Productivity Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <h2>AI Productivity Blocker</h2>
+
+      <section>
+        <label for="api-key">Claude API Key</label>
+        <div class="input-row">
+          <input
+            type="password"
+            id="api-key"
+            placeholder="sk-ant-..."
+            autocomplete="off"
+          />
+          <button id="btn-save-key" class="btn btn-primary">Save</button>
+        </div>
+        <p id="key-status" class="status-msg"></p>
+      </section>
+
+      <section>
+        <h3>Cached Verdicts</h3>
+        <ul id="cache-list" class="domain-list"></ul>
+        <button id="btn-clear-cache" class="btn btn-danger">Clear cache</button>
+      </section>
+
+      <section id="strict-section">
+        <h3>Strict Mode</h3>
+        <div id="strict-off">
+          <p class="subtitle">Lock settings with a password so you can't disable the blocker.</p>
+          <div class="input-row" style="margin-top:8px">
+            <input type="password" id="strict-password" placeholder="Set a password" autocomplete="new-password" />
+            <button id="btn-enable-strict" class="btn btn-danger">Enable</button>
+          </div>
+          <p id="strict-status" class="status-msg"></p>
+        </div>
+        <div id="strict-on" style="display:none">
+          <p class="strict-badge">🔒 Strict mode is ON</p>
+          <div class="input-row" style="margin-top:8px">
+            <input type="password" id="strict-unlock-password" placeholder="Enter password to disable" />
+            <button id="btn-disable-strict" class="btn btn-secondary">Disable</button>
+          </div>
+          <p id="strict-unlock-status" class="status-msg"></p>
+        </div>
+      </section>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
